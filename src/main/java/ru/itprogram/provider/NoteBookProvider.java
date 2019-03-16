@@ -41,15 +41,15 @@ public class NoteBookProvider {
 
     public NoteBook getOneRandomInstanceNoteBook() {
         int noteBookLength = noteBook.length;
-        Random random = new Random(noteBookLength);
-        return noteBook[random.nextInt()];
+        Random random = new Random();
+        return noteBook[random.nextInt(noteBookLength)];
     }
 
     public Note getOneRandomInstanceNote() {
         NoteBook randomNoteBook = getOneRandomInstanceNoteBook();
         int noteLength = randomNoteBook.arrNoteLength();
-        Random random = new Random(noteLength);
-        return randomNoteBook.getArrNote()[random.nextInt()];
+        Random random = new Random();
+        return randomNoteBook.getArrNote()[random.nextInt(noteLength)];
     }
 
     public NoteBook[] getNoteBook() {
