@@ -1,14 +1,14 @@
 package ru.itprogram;
 
 import ru.itprogram.entity.Note;
-import ru.itprogram.provider.NoteBookProvider;
+import ru.itprogram.provider.InMemoryNoteBookProvider;
 import ru.itprogram.view.NoteBookConsoleView;
 import ru.itprogram.view.NoteBookView;
 
 public class App
 {
     public static void main( String[] args ) {
-        NoteBookProvider noteBookProvider = NoteBookProvider.getInstance();
+        InMemoryNoteBookProvider noteBookProvider = InMemoryNoteBookProvider.getInstance();
         NoteBookConsoleView noteBookConsoleView = new NoteBookConsoleView();
 
         System.out.println("Вывод случайного экземпляра класса NoteBook:");
