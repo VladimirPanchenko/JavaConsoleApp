@@ -2,6 +2,7 @@ package ru.itprogram.provider;
 
 import ru.itprogram.entity.Note;
 import ru.itprogram.entity.NoteBook;
+import ru.itprogram.entity.NoteType;
 
 import java.util.Date;
 import java.util.Random;
@@ -13,19 +14,19 @@ public class InMemoryNoteBookProvider implements NoteBookProvider{
     {
         noteBook = new NoteBook[] {
                 new NoteBook(new Note[] {
-                        new Note("Купить хлеба", new Date()),
-                        new Note("Купить микросхемы", new Date()),
-                        new Note("Купить микроконтроллер", new Date()),
+                        new Note("Купить хлеба", new Date(), NoteType.NOTE),
+                        new Note("Купить микросхемы", new Date(), NoteType.TASK),
+                        new Note("Купить микроконтроллер", new Date(), NoteType.TASK),
                 }),
                 new NoteBook(new Note[] {
-                        new Note("Продать хлеб", new Date()),
-                        new Note("Продать микросхемы", new Date()),
-                        new Note("Продать микроконтроллер", new Date()),
+                        new Note("Продать хлеб", new Date(), NoteType.NOTE),
+                        new Note("Продать микросхемы", new Date(), NoteType.TASK),
+                        new Note("Продать микроконтроллер", new Date(), NoteType.TASK),
                 }),
                 new NoteBook(new Note[] {
-                        new Note("Написать код", new Date()),
-                        new Note("Придумать архитектуру", new Date()),
-                        new Note("Проверить идею", new Date()),
+                        new Note("Написать код", new Date(), NoteType.NOTE),
+                        new Note("Придумать архитектуру", new Date(), NoteType.TASK),
+                        new Note("Проверить идею", new Date(), NoteType.NOTE),
                 })
         };
     }
