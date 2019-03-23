@@ -1,14 +1,14 @@
 package ru.itprogram.entity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Note {
     private String text;
-    private Date recordDate;
+    private LocalDateTime recordDate;
     private NoteType noteType;
 
-    public Note(String text, Date recordDate, NoteType noteType) {
+    public Note(String text, LocalDateTime recordDate, NoteType noteType) {
         this.text = text;
         this.recordDate = recordDate;
         this.noteType = noteType;
@@ -22,11 +22,11 @@ public class Note {
         this.text = text;
     }
 
-    public Date getRecordDate() {
+    public LocalDateTime getRecordDate() {
         return recordDate;
     }
 
-    public void setRecordDate(Date recordDate) {
+    public void setRecordDate(LocalDateTime recordDate) {
         this.recordDate = recordDate;
     }
 

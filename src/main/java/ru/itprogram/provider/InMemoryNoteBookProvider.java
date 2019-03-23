@@ -4,7 +4,7 @@ import ru.itprogram.entity.Note;
 import ru.itprogram.entity.NoteBook;
 import ru.itprogram.entity.NoteType;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Random;
 
 public class InMemoryNoteBookProvider implements NoteBookProvider{
@@ -14,19 +14,19 @@ public class InMemoryNoteBookProvider implements NoteBookProvider{
     {
         noteBook = new NoteBook[] {
                 new NoteBook(new Note[] {
-                        new Note("Купить хлеба", new Date(), NoteType.NOTE),
-                        new Note("Купить микросхемы", new Date(), NoteType.TASK),
-                        new Note("Купить микроконтроллер", new Date(), NoteType.TASK),
+                        new Note("Купить хлеба", LocalDateTime.now(), NoteType.NOTE),
+                        new Note("Купить микросхемы", LocalDateTime.now(), NoteType.TASK),
+                        new Note("Купить микроконтроллер", LocalDateTime.now(), NoteType.TASK),
                 }),
                 new NoteBook(new Note[] {
-                        new Note("Продать хлеб", new Date(), NoteType.NOTE),
-                        new Note("Продать микросхемы", new Date(), NoteType.TASK),
-                        new Note("Продать микроконтроллер", new Date(), NoteType.TASK),
+                        new Note("Продать хлеб", LocalDateTime.now(), NoteType.NOTE),
+                        new Note("Продать микросхемы", LocalDateTime.now(), NoteType.TASK),
+                        new Note("Продать микроконтроллер", LocalDateTime.now(), NoteType.TASK),
                 }),
                 new NoteBook(new Note[] {
-                        new Note("Написать код", new Date(), NoteType.NOTE),
-                        new Note("Придумать архитектуру", new Date(), NoteType.TASK),
-                        new Note("Проверить идею", new Date(), NoteType.NOTE),
+                        new Note("Написать код", LocalDateTime.now(), NoteType.NOTE),
+                        new Note("Придумать архитектуру", LocalDateTime.now(), NoteType.TASK),
+                        new Note("Проверить идею", LocalDateTime.now(), NoteType.NOTE),
                 })
         };
     }
