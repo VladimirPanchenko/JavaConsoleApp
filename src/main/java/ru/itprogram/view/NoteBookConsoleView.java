@@ -5,9 +5,6 @@ import ru.itprogram.entity.NoteBook;
 
 public class NoteBookConsoleView extends NoteBookView {
 
-    public NoteBookConsoleView() {
-    }
-
     public void print(Note note) {
         System.out.println(note.toString());
     }

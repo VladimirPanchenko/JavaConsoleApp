@@ -5,7 +5,7 @@ public enum NoteType {
 
     private String rusName;
 
-    private NoteType(String rusName) {
+    NoteType(String rusName) {
         this.rusName = rusName;
     }
 
